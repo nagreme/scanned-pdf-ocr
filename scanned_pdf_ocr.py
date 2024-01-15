@@ -52,7 +52,7 @@ def main(args):
     logging.info("Re-assembling PDF")
     merger = PdfWriter()
     for i in range(len(pdf)):
-        merger.append(f"{PAGES_FOLDER}{str(i)}{EXT_PDF}")
+        merger.append(f"{PAGES_FOLDER}page_{str(i)}{EXT_PDF}")
     
     merger.write(args.output + EXT_PDF)
     merger.close()
